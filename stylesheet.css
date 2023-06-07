@@ -1,1 +1,849 @@
+/********************START FORSIDE*****************************/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+.overall {
+  padding-bottom: 80px;
+  padding-top: 40px;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0,0,0,0.75),rgba(0,0,0,0.75)),url(Images/bagrund.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar{
+    width: 100%;
+    margin: auto;
+    padding: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    z-index: +2;
+}
+
+.logo{
+    width: 75px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+    position: relative;
+}
+
+.navbar ul li a{
+    text-decoration: none;
+    color: #8d8b8b;
+    text-transform: uppercase;
+    cursor: pointer;
+    /*-webkit-text-stroke: 0.7px black;*/
+    font-weight: bold;
+}
+
+.navbar ul li::after{
+    content: '';
+    height: 3px;
+    width: 0;
+    background: #737365;
+    position: absolute;
+    left: 0;
+    bottom: -10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover::after{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+    color: #fff;
+}
+
+.front{
+    width: 400px;
+    margin-top: 20px;
+}
+input{
+    display: none;
+}
+.content h1{
+    font-size: 80px;
+    margin-top: 10px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.content h2{
+    margin: 20px auto;
+    font-weight: 100;
+    line-height: 25px;
+    letter-spacing: 18px;
+}
+/********************SLUT FORSIDE*****************************/
+
+
+/********************START ABOUT*****************************/
+
+
+.faelles {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1cm;
+}
+
+.faelles img {
+  width: 1125px;
+  height: 400px;
+  object-fit: cover;
+}
+
+/*ABOUT START*/
+.containerinfo{
+  text-align: center;
+  background: #171616;
+}
+
+.headerinfo h1{
+  font-weight: normal;
+  font-size: 80px;
+  position: relative;
+  padding-top: 20px;
+  font-family:'Times New Roman', Times, serif;
+  color: #ffffff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*FÅ EN LINJE TIL AT ÆNDRE SIG UNDER OVERSKRIFT*/
+.headerinfo h1::before{
+content: '';
+position:absolute;
+width: 100px;
+height: 3px;
+background-color: #737365;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+animation: animate 8s linear infinite;
+}
+/*LINJEN ANIMERE HVER 8 SEKUND, HER ER HVORDAN ANIMATIONEN FUNGERE*/
+@keyframes animate{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 245px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+
+.headerinfo{
+  padding: 60px;
+  margin: auto;
+  line-height: 50px;
+}
+
+.sb-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 48px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team {
+  margin: 10px;
+  padding: 22px;
+  width: 500px;
+  cursor: pointer;
+  transition: 0.4s;
+  box-sizing: border-box;
+}
+
+.navn{
+  padding: 12px;
+  font-weight: bold;
+  color: #fff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+ .desig{
+  font-style: italic;
+  font-weight: lighter;
+  color: #fff;
+ }
+
+ .social-links {
+  padding-top: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px; /* Adjust the gap as per your preference */
+}
+
+.social-links a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  transition: 0.4s;
+  color: #ffffff; /* Color of the icons */
+  text-decoration: none; /* Remove underline from the icons */
+  font-size: 24px; /* Size of the icons */
+}
+
+.social-links a:hover {
+  opacity: 0.8;
+}
+
+.social-links a::before {
+  content: none;
+}
+
+ .aboutinfo{
+  color: #fff;
+  font-size: 16px;
+  text-align: justify;
+  text-justify: inter-word;
+  width: 450px;
+  
+
+ }
+
+ @media screen and (max-width: 600px) {
+  .team{
+    max-width: 100%;
+  }
+  
+ }
+/********************SLUT ABOUT*****************************/
+
+
+/********************START GALLERY*****************************/
+.sectiongallery{
+  height: 100%;
+  width: auto;
+}
+
+.container{
+    width: 100%;
+    text-align: center;
+}
+
+.container h1{
+    font-weight: normal;
+    font-size: 80px;
+    position: relative;
+    margin: 40px 0;
+    font-family:'Times New Roman', Times, serif;
+}
+
+
+.container h1::before{
+content: '';
+position:absolute;
+width: 100px;
+height: 3px;
+background-color: #737365;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+animation: animate 8s linear infinite;
+}
+
+@keyframes animate{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 200px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+
+.bar{
+     background-color: rgb(17,16,16);
+     width: 90%;
+     margin: 0 auto 20px auto;
+     height: 60px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     border-radius: 5px;
+     box-shadow: 3px 3px 5px rgb(223, 217, 217);
+}
+
+#label-all{
+    display: inline-block;
+    height: 100%;
+    margin: 0 20px;
+    line-height: 60px;
+    font-size: 24px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+    transition: .5s;
+}
+
+#label-all:hover{
+  color: #737365;  
+}
+
+#label-brian{
+  display: inline-block;
+  height: 100%;
+  margin: 0 20px;
+  line-height: 60px;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: .5s;
+}
+
+#label-brian:hover{
+color: #737365;  
+}
+
+#label-anders{
+  display: inline-block;
+  height: 100%;
+  margin: 0 20px;
+  line-height: 60px;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  transition: .5s;
+}
+
+#label-anders:hover{
+color: #737365;  
+}
+
+.photo-gallery {
+    width: 90%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr)); /* Updated property */
+    grid-gap: 30px;
+    grid-row-gap: 30px;
+  }l
+
+.photo-gallery .pic {
+    position: relative;
+    height:230px;
+    width: 230px;
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px lightgray;
+    cursor: pointer;
+    transition: .5s;
+  }
+  
+  .photo-gallery .pic img {
+    width: 230px;
+    height: 230px;
+    border-radius: 10px;
+    transition: .5s;
+  }
+  
+  .photo-gallery .pic::after {
+    content: "";
+    position: absolute;
+    width: 230px;
+    bottom: 0;
+    left: 0;
+    border-radius: 10px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  
+  .photo-gallery .pic:hover::after {
+    height: 100%;
+  }
+  
+  .photo-gallery .pic:hover::before {
+    margin-top: 0;
+    opacity: 1;
+  }
+  
+  #check1:checked ~ .photo-gallery .pic {
+    opacity: 1;
+    transform: scale(1);
+    position: relative;
+    transition: .5s;
+  }
+  
+  #check2:checked ~ .photo-gallery .pic.brian {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+  }
+  
+  #check2:checked ~ .photo-gallery .pic.anders {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+  }
+
+  #check3:checked ~ .photo-gallery .pic.brian {
+    opacity: 0;
+    transform: scale(0);
+    position: absolute;
+    transition: .0s;
+  }
+  
+  #check3:checked ~ .photo-gallery .pic.anders {
+    transform: scale(1);
+    opacity: 1;
+    position: relative;
+  }
+/********************SLUT GALLERY*****************************/
+
+
+/********************START ANMELDELSER*****************************/
+.kunde-container {
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', Times, serif;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.kunde-box {
+  width: calc(50% - 30px); /* Adjust the width value as needed */
+  box-shadow: 2px 2px 30px rgba(0, 0, 0, 0.4);
+  background-color: #fff;
+  padding: 15px;
+  margin: 15px;
+  cursor: pointer;
+  flex: 0 0 calc(50% - 30px); /* Adjust the flex value as needed */
+}
+
+/* Add this media query to adjust the layout on smaller screens */
+@media only screen and (max-width: 767px) {
+  .kunde-box {
+    width: 100%; /* Adjust the width value as needed */
+    flex: 0 0 100%; /* Adjust the flex value as needed */
+  }
+}
+
+
+.kunder-header h1 {
+  font-weight: normal;
+  font-size: 80px;
+  position: relative;
+  padding-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #0e0e0e;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.kunder-header h1::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #737365;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 8s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    width: 100px;
+  }
+  50% {
+    width: 420px;
+  }
+  100% {
+    width: 100px;
+  }
+}
+
+.kunder-header {
+  letter-spacing: 1px;
+  margin: 25px 0px;
+  padding: 10px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.kunder-header span {
+  font-size: 24px;
+  color: #171616;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.profil {
+  display: flex;
+  align-items: center;
+}
+
+.profil-billede {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 10px;
+}
+
+.profil-billede img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.navn {
+  display: flex;
+  flex-direction: column;
+}
+
+.box-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.anmeldelser {
+  color: #737365;
+}
+
+.kunde-kommentarer p {
+  font-size: 14px;
+  color: #171616;
+}
+
+.kunde-box:hover {
+  transform: translateY(-10px);
+  transition: all ease;
+}
+/********************SLUT ANMELDELSER*****************************/
+
+
+/********************START FOOTER*********************************/
+footer {
+  position: relative;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: #171616;
+  height: 3cm;
+  padding: 20px 0;
+  display: flex;
+  justify-content: space-between; /* Adjust alignment as needed */
+  align-items: center;
+  color: #ffffff;
+  overflow: hidden; /* Prevent content from expanding the page */
+}
+
+.footer-info {
+  display: flex;
+  gap: 20px;
+  align-items: center; /* Center the contact info vertically */
+}
+
+.footer-info p {
+  margin: 0;
+}
+
+.rights {
+  display: flex;
+  align-items: center; /* Center the copyright text vertically */
+}
+
+.rights p {
+  margin-right: 5px;
+  padding-right: 5px;
+}
+
+
+.footer-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footer-left .genero-logo img {
+  height: 100px;
+}
+
+.footer-middle {
+  display: flex;
+  flex-grow: 1;
+  justify-content: center;
+}
+
+.kontakt-container {
+  text-align: center;
+}
+
+.kontakt-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.kontakt-detail {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.kontakt-detail i {
+  color: #ffffff;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.social ul {
+  list-style: none; /*FJERNER */
+  display: flex;
+  gap: 10px;
+}
+
+.social ul li a {
+  color: #ffffff; /*FARVE PÅ VORES IKONER*/
+  text-decoration: none; /*FJERNER STREGEN UNDER IKONERNE*/
+  font-size: 24px; /*STØRRELSERNE PÅ IKONERNE*/
+  display:flex;/*SÆTTER DEM FRA VENSTRE TIL HØJRE*/
+  align-items: center; /*CENTRERE DEM*/
+}
+
+/*TILFØJER MELLEMRUM MELLEM IKONERNE*/
+.social ul li a i {
+  margin-right: 10px;
+}
+/*DET HER TILFØJER EN LILLE HOVER EFFEKT.*/
+.social ul li a:hover {
+  opacity: 0.8; 
+}
+/* FJERNER CIRKLERNE OVEN PÅ VORES IKONER */
+.social ul li a::before {
+  content: none; 
+}
+/*******SLUT PÅ FOOTER*****************************/
+
+
+/*******START PÅ KONTAKT & PRISER SIDEN*****************************/
+.sectioncontact {
+  padding-top: 60px;
+  background-color: #171616;
+  padding-bottom: 80px;
+  margin: 0 auto; /* Add this line to center the section horizontally */
+}
+
+.sectioncontact h1 {
+  font-weight: normal;
+  font-size: 80px;
+  position: relative;
+  padding-top: 20px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/* FÅ EN LINJE TIL AT ÆNDRE SIG UNDER OVERSKRIFT */
+.sectioncontact h1::before {
+  content: '';
+  position: absolute;
+  width: 100px;
+  height: 3px;
+  background-color: #737365;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: animate 8s linear infinite;
+}
+
+/* LINJEN ANIMERE HVER 8 SEKUND, HER ER HVORDAN ANIMATIONEN FUNGERER */
+@keyframes animate {
+  0% {
+    width: 50px;
+  }
+  50% {
+    width: 245px;
+  }
+  100% {
+    width: 50px;
+  }
+}
+
+.sectioncontact h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.contact-info {
+  display: flex;
+  flex-wrap: wrap;
+  color: #fff;
+  align-items: center;
+  padding-left: 23%;
+}
+
+.artist p{
+  width: 300px;
+  padding-top: 10px;
+  text-align: center;
+  font-size: 20px;
+}
+
+.artist h3{
+  font-size: 22px;
+  font-weight: bold;
+  padding-left: 80px;
+}
+
+
+
+.contact-info .artist {
+  flex: 1 0 50%;
+}
+
+
+.containerbooking {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.kontaktinfo{
+ padding-top: 50px;
+  }
+
+.kontaktinfo p{
+text-align: center;
+padding-top: 20px;
+font-size: 20px;
+}
+
+
+/*FAQ START ==========================================================*/
+.sectionfaq h1{
+  font-weight: normal;
+  font-size: 80px;
+  position: relative;
+  padding-top: 20px;
+  font-family:'Times New Roman', Times, serif;
+  color: #000000;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+/*FÅ EN LINJE TIL AT ÆNDRE SIG UNDER OVERSKRIFT*/
+.sectionfaq h1::before{
+content: '';
+position:absolute;
+width: 100px;
+height: 3px;
+background-color: #737365;
+bottom: -10px;
+left: 50%;
+transform: translateX(-50%);
+animation: animate 8s linear infinite;
+}
+/*LINJEN ANIMERE HVER 8 SEKUND, HER ER HVORDAN ANIMATIONEN FUNGERE*/
+@keyframes animate{
+    0%{
+        width: 50px;
+    }
+    50%{
+        width: 245px;
+    }
+    100%{
+        width: 50px;
+    }
+}
+
+.sectionfaq {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.title {
+  font-size: 48px;
+  margin: 32px 0;
+}
+
+.faq {
+  max-width: 700px;
+  margin-top: 32px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #737365;
+  cursor: pointer;
+}
+
+.question {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  
+}
+
+.question h2 {
+  font-size: 24px;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 1.4s ease;
+}
+
+.answer p {
+  padding-top: 16px;
+  line-height: 1.6;
+  font-size: 18px;
+}
+
+.faq.active .answer {
+  max-height: 300px;
+}
 
